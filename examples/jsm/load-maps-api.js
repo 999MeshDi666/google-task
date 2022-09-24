@@ -1,15 +1,15 @@
 import {Loader as MapsApiLoader} from '@googlemaps/js-api-loader';
 
-const LOCAL_STORAGE_API_KEY = 'threejs-overlay-view-api-key';
-const LOCAL_STORAGE_MAP_ID = 'threejs-overlay-view-map-id';
+const LOCAL_STORAGE_API_KEY = 'AIzaSyBdNFQ1d0bC30tkuJEnCZJdY5HPYAiTXok';
+const LOCAL_STORAGE_MAP_ID = '75513afe813ebce8';
 
 // fetch order: env > url params > local storage
 export function getMapsApiOptions() {
   const storage = window.localStorage;
   const url = new URL(location.href);
 
-  let apiKey = process.env.GOOGLE_MAPS_API_KEY;
-  let mapId = process.env.GOOGLE_MAPS_MAP_ID;
+  let apiKey = 'AIzaSyBdNFQ1d0bC30tkuJEnCZJdY5HPYAiTXok';
+  let mapId = '75513afe813ebce8';
 
   if (!apiKey || !mapId) {
     apiKey = url.searchParams.get('apiKey');
